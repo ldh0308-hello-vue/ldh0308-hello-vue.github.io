@@ -14,6 +14,12 @@ Github link : https://ldh0308-hello-vue.github.io/
 - Vue
 - Firebase
 
+  ### How to Deploy
+|STG|BRANCH|TRIGGER|URL|
+|------|---|---|---|
+|DEV|Branch of PR|manual firebase cmd*|https://vue-dev-b62d9.web.app/|
+|PRD|main|Auto Github Action|https://ldh0308-hello-vue.github.io/|
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
