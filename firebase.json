@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "vue-dev-b62d9",
+    "public": "/",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
