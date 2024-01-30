@@ -8,6 +8,12 @@
 Dev link(Firebase) : https://vue-dev-b62d9.web.app/<br>
 Github link : https://ldh0308-hello-vue.github.io/
 
+### How to Contribute
+- WSL Ubuntu 22.04 LTS
+- Vim
+- Vue
+- Firebase
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
