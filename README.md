@@ -20,9 +20,24 @@ Github link : https://ldh0308-hello-vue.github.io/
 |DEV|Branch of PR|manual firebase cmd*|https://vue-dev-b62d9.web.app/|
 |PRD|main|Auto Github Action|https://ldh0308-hello-vue.github.io/|
 
-## Recommended IDE Setup
+```bash
+$ firebase deploy
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+=== Deploying to 'vue-dev-b62d9'...
+
+i  deploying hosting
+i  hosting[vue-dev-b62d9]: beginning deploy...
+i  hosting[vue-dev-b62d9]: found 6 files in docs
+✔  hosting[vue-dev-b62d9]: file upload complete
+i  hosting[vue-dev-b62d9]: finalizing version...
+✔  hosting[vue-dev-b62d9]: version finalized
+i  hosting[vue-dev-b62d9]: releasing new version...
+✔  hosting[vue-dev-b62d9]: release complete
+
+✔  Deploy complete!
+
+```
+
 
 ## Customize configuration
 
