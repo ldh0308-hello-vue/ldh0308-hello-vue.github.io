@@ -1,6 +1,7 @@
 # Vue build
 
-This template should help get you started developing with Vue 3 in Vite.
+Dev link(Firebase) : https://vue-dev-b62d9.web.app/
+Github link : https://ldh0308-hello-vue.github.io/
 
 ## Recommended IDE Setup
 
