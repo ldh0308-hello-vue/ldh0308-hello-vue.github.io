@@ -1,12 +1,14 @@
 <script setup>
 import { ref } from 'vue'
+import category from "@/assets/category.json"
 
-const parentMessage = ref('Parent')
-const items = ref([{ message: 'Foo' }, { message: 'Bar'}])
+const categories = ref(category)
+//const parentMessage = ref('Parent')
+//const items = ref([{ message: 'Foo' }, { message: 'Bar'}])
 </script>
 
 <template>
-  <li v-for= "(item, index) in items">
-    {{ parentMessage }} - {{ index }} - {{ item.message }}
+  <li v-for= "(item) in categories">
+     {{ item.name }} {{ item.code}}
   </li>
 </template>
