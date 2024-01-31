@@ -9,8 +9,11 @@ const news = ref(science.articles)
 
 <template>
   <ul>
-   <li v-for= "(jsonItem) in news">
+   <template v-for= "(jsonItem) in news">
+   <li v-if="jsonItem.author === '이지운'">
+     {{ jsonItem.author }} <br>
      {{ jsonItem.title }} - {{ jsonItem.name}}
    </li>
+   </template>
   </ul>
 </template>
