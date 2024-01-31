@@ -1,16 +1,16 @@
 <script setup>
 import { ref } from 'vue'
-import category from "@/assets/category.json"
+import science from "@/assets/science.json"
 
-const categories = ref(category)
+const news = ref(science)
 //const parentMessage = ref('Parent')
 //const items = ref([{ message: 'Foo' }, { message: 'Bar'}])
 </script>
 
 <template>
-  <hr>
-  <li v-for= "(item) in categories">
-     {{ item.name }} - {{ item.code}}
-  </li>
-  <hr>
+  <ul>
+   <li v-for= "(jsonItem) in news">
+     {{ jsonItem.title }} - {{ jsonItem.name}}
+   </li>
+  </ul>
 </template>
