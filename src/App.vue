@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import science from "@/assets/science.json"
 
-const news = ref(science)
+const news = ref(science.articles)
 //const parentMessage = ref('Parent')
 //const items = ref([{ message: 'Foo' }, { message: 'Bar'}])
 </script>
