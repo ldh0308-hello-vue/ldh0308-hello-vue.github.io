@@ -8,7 +8,9 @@ const categories = ref(category)
 </script>
 
 <template>
+  <hr>
   <li v-for= "(item) in categories">
-     {{ item.name }} {{ item.code}}
+     {{ item.name }} - {{ item.code}}
   </li>
+  <hr>
 </template>
