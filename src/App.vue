@@ -1,47 +1,30 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
+   <script setup>
+   import { ref } from 'vue'
+   let id = 0
+   const newTodo = ref('')
+   const todos = ref([
+           { id : id++, issue: 'BackLog'},{id : id++, issue: 'Todo'},
+           { id : id++, issue: 'Going Hawaii'}
+ ])
 
-<template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
-</template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+  function addTodo(e){
+  //    e.preventDefault();  // 이벤트 막기
+      todos.value.push({id : id++,issue : newTodo.value})
   }
-
-  .logo {
-    margin: 0 2rem 0 0;
+ 
+  function removeTodo(todo){
+      console.log('dddd')
+      todos.value = todos.value.filter(item => item !== todo)
   }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
+  </script>
+  <template>
+      <form @submit.prevent="addTodo">  <!-- 위에 e.preventDefault() 대신에  submit.prevnet 를 달아도 됨. -->
+          <input v-model="newTodo">
+          <button>할 일 추가</button>
+      </form>
+      <ul>
+          <li v-for="todo in todos">
+              {{ todo.issue }} - <button @click="removeTodo(todo)">Done</button>
+          </li>
+      </ul>
+ </template>
