@@ -1,22 +1,11 @@
 <script setup>
-import { ref } from 'vue'
-import science from "@/assets/science.json"
-
-const news = ref(science.articles)
-//const parentMessage = ref('Parent')
-//const items = ref([{ message: 'Foo' }, { message: 'Bar'}])
-function keyword(author){
-    return author.includes('n')
+function say(message){
+    alert(message)
 }
 </script>
 
 <template>
-  <ul>
-   <template v-for= "(jsonItem) in news">
-   <li v-if="keyword(jsonItem.author)">
-     {{ jsonItem.author }} <br>
-    {{jsonItem.title}} - {{ jsonItem.name}}
-   </li>
-   </template>
-  </ul>
+ <button @click="say('hello')">Say hello</button>
+ <button @click="say('bye')">Say bye</button>
 </template>
+
