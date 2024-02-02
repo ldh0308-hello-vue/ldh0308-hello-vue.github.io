@@ -1,30 +1,19 @@
-   <script setup>
-   import { ref } from 'vue'
-   let id = 0
-   const newTodo = ref('')
-   const todos = ref([
-           { id : id++, issue: 'BackLog'},{id : id++, issue: 'Todo'},
-           { id : id++, issue: 'Going Hawaii'}
- ])
+<script setup>
+import { ref } from 'vue'
 
-  function addTodo(e){
-  //    e.preventDefault();  // 이벤트 막기
-      todos.value.push({id : id++,issue : newTodo.value})
-  }
- 
-  function removeTodo(todo){
-      console.log('dddd')
-      todos.value = todos.value.filter(item => item !== todo)
-  }
-  </script>
-  <template>
-      <form @submit.prevent="addTodo">  <!-- 위에 e.preventDefault() 대신에  submit.prevnet 를 달아도 됨. -->
-          <input v-model="newTodo">
-          <button>할 일 추가</button>
-      </form>
-      <ul>
-          <li v-for="todo in todos">
-              {{ todo.issue }} - <button @click="removeTodo(todo)">Done</button>
-          </li>
-      </ul>
- </template>
+const show = ref(true)
+const list = ref([1, 2, 3])
+</script>
+
+<template>
+ <button @click="show = !show">List 렌더링 ON/OFF </button>
+ <button @click="list.push(list.length + 1)">List 추가</button>
+ <button @click="list.pop()">List 제거</button>
+ <button @click="list.reverse()">List 뒤집기</button>
+
+<ul v-if="show">
+ <li v-for="item of list">{{item}}</li>
+</ul>
+<p v-else-if="list.length">List is not empty, but hidden.</p>
+<p v-else>List is empty.</p>
+</template>
